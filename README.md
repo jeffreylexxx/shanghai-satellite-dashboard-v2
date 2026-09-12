@@ -5,22 +5,6 @@
 ## DEMO 演示地址
 https://jeffreylexxx.github.io/shanghai-satellite-dashboard-v2/
 
-## 直接本地查看
-
-双击 `public/index.html`。页面数据已嵌入 HTML，不需要本地服务器，也不依赖 CDN。
-
-当前仓库附带的初始数据是用工作区保存的传统 TLE 生成的本地种子；上传 GitHub 后，第一次手动运行 Action 会换成最新 OMM/CSV。页面会在“方法来源”中显示实际来源。
-
-## 上传到 GitHub
-
-1. 新建一个 GitHub 仓库，建议使用 `main` 默认分支。
-2. 将本目录**里面的全部文件和隐藏目录**上传到仓库根目录，特别是 `.github/workflows/`。
-3. 打开仓库 **Settings → Pages**，将 **Source** 设为 **GitHub Actions**。
-4. 打开 **Actions → Update satellite data and deploy → Run workflow**，手动运行一次。
-5. 构建通过后，从 Pages 设置页或 Action 的 deploy job 打开网址。
-
-工作流每天 **04:17（Asia/Shanghai）**运行。定时任务只在默认分支执行；公开仓库若连续 60 天没有活动，GitHub 可能自动停用 scheduled workflow，需要在 Actions 中重新启用。
-
 ## 更新流程
 
 ```text
@@ -43,15 +27,6 @@ latest.json + 90 天轻量历史 + 可审计原始快照 artifact
 - 类型和部分运营方：依据公开名称保守推断，网页明确标注
 
 若下载结果过小、有效目标少于 10,000、JSON 统计不一致或页面未正确嵌入数据，工作流会失败并停止部署，因此线上会保留上一次成功版本。
-
-## 本地重新生成
-
-```powershell
-python -m pip install -r requirements.txt
-python scripts/update_data.py
-python scripts/build_site.py
-python scripts/validate_build.py
-```
 
 使用本地传统 TLE 做离线种子：
 
