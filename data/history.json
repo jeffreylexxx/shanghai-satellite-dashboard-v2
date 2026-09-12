@@ -1,10 +1,10 @@
 [
   {
     "date": "2026-09-12",
-    "unique_satellites": 15706,
-    "pass_count": 59758,
-    "starlink_unique": 10712,
-    "starlink_passes": 42676,
-    "peak_simultaneous": 705
+    "unique_satellites": 16247,
+    "pass_count": 61168,
+    "starlink_unique": 11127,
+    "starlink_passes": 43621,
+    "peak_simultaneous": 717
   }
 ]
