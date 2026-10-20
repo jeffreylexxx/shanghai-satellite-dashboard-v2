@@ -270,5 +270,13 @@
     "starlink_unique": 11150,
     "starlink_passes": 43627,
     "peak_simultaneous": 723
+  },
+  {
+    "date": "2026-10-21",
+    "unique_satellites": 16451,
+    "pass_count": 61815,
+    "starlink_unique": 11147,
+    "starlink_passes": 43542,
+    "peak_simultaneous": 726
   }
 ]
